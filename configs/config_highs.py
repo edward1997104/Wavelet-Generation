@@ -6,7 +6,7 @@ debug_base_folder = r"../debug"
 
 ## training
 # data
-data_files = [('<FOLDER_OF_DATA>/03001627_0.1_bior6.8_3_zero.npy', 3), ('<FOLDER_OF_DATA>/03001627_0.1_bior6.8_2_zero.npy', 2)]
+data_files = [('wavelet_data/03001627_0.1_bior6.8_3_zero.npy', 3), ('wavelet_data/03001627_0.1_bior6.8_2_zero.npy', 2)]
 interval = 1
 first_k = None
 loss_function = torch.nn.MSELoss()

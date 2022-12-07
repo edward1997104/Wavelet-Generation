@@ -1,5 +1,7 @@
 # Neural Wavelet-domain Diffusion for 3D Shape Generation [SIGGRAPH Asia 2022] 
 
+![teaser](images/teaser.png)
+
 # Environments
 You can create and activate a conda environment for this project using the following commands:
 ```angular2html
