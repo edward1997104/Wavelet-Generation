@@ -56,7 +56,7 @@ If you find our work useful in your research, please consider citing:
 ```
 @article{hui2022wavelet,
     title = {Neural Wavelet-domain Diffusion for 3D Shape Generation},
-    author = {Ka-Hei Hui and Ruihui Li and Jingyu Wu and Chi-Wing Fu},
+    author = {Ka-Hei Hui and Ruihui Li and Jingyu Hu and Chi-Wing Fu},
     joural = {SIGGRAPH Asia 2022 Conference Papers},
     month = {December},
     year = {2022},
