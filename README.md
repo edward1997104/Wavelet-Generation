@@ -27,12 +27,12 @@ data_files = [('wavelet_data/03001627_0.1_bior6.8_3_zero.npy', 3), ('wavelet_dat
 
 For the training of diffusion model, you can run the following command:
 ```angular2html
-python train/trainer.py --resume_path ./configs/config.py
+python trainer/trainer.py --resume_path ./configs/config.py
 ```
 
 For the training of detail predictor, you can run the following command:
 ```angular2html
-python train/trainer.py --resume_path ./configs/config_highs.py
+python trainer/trainer.py --resume_path ./configs/config_highs.py
 ```
 
 # Inference
