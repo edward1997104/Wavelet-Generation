@@ -48,6 +48,8 @@ python models/network_gen.py
 
 Note that if you inference your own trained model, you need to set the above variables according to your training output folders and epoch numbers.
 
+[27/3/2023 Update] We also provide the original pre-trained models of the chair and airplane categories in ([link](https://drive.google.com/file/d/1aDcgK8SPSb6JY7mpngh5V29EyWS0M43W/view?usp=share_link)). Besides, we provide the generated meshes of the ([chair](https://drive.google.com/file/d/1VD64JcXYYFc600CZSnIs2w4ggE1OP44g/view?usp=share_link)) and ([airplane](https://drive.google.com/file/d/1BSecRMy0k60qkgwsM67Qo4YBxzdZ2grh/view?usp=share_link)).
+
 ### Note: 
 you need to set ```PYTHONPATH=<project root directory>``` before running any above commands.
 
