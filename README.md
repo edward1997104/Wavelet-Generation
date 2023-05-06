@@ -14,7 +14,30 @@ pip install git+https://github.com/fbcotter/pytorch_wavelets
 For the dataset, we use the data split provided by [IM-NET](https://github.com/czq142857/IM-NET-pytorch) for training and evaluation.
 For ease of data preparation, we provided pre-computed coarse and detail coefficient volumes in this [link](https://drive.google.com/file/d/1p1xJqVejw_qaoZTdx7dv8VtUTsT3Dg5A/view?usp=share_link), and you can unzip it into ```wavelet_data``` folder.
 
-The detailed instruction for the coefficient computation will be released very soon.
+
+For the data processing, it involves running 4 files in order: ```flip_axis.py```, ```to_manifold.py```, ```sample_sdf.py``` and ```convert_wavelet.py```. 
+These four files will flip the orientation of the mesh, convert them into watertight meshes, sampling the sdf values and finally convert it to wavelet coefficients.
+
+To prepare the dataset, you must first download the ShapeNetV1 dataset from [https://shapenet.org/](https://shapenet.org/).
+
+Before running `flip_axis.py`, set the ShapeNet root folder in the `root` variable.
+
+To run `to_manifold.py`, you must first compile the library in `external/Manifold` according to the instructions given in [https://github.com/hjwdzh/Manifold](https://github.com/hjwdzh/Manifold).
+After that, also set the ShapeNet root folder in the `root` variable.
+
+To run `sample_sdf.py`, you need to install a modified version of `mesh_to_sdf` by running:
+
+```
+cd external/mesh_to_sdf
+pip install .
+```
+
+Before running `sample_sdf.py`, set the ShapeNet root folder in the `data_folder` variable, and set the folder to save SDF samples in the `save_folder` variable.
+To choose which objects to sample SDF values, specify a txt filename in the `obj_names_path` variable. You can follow the name format from [IM-NET](https://github.com/czq142857/IM-NET-pytorch), or use the names provided in our data processing [here](https://drive.google.com/file/d/1vvoxJXsQgXHWt7rutsoKWrZFgr_Zdftd/view?usp=share_link).
+
+Finally, you can run `convert_wavelet.py` after setting the folder to save SDF samples in the `sdf_save_folder` variable, the folder to save the wavelet coefficients in the `npy_save_folder` variable, and the ShapeNet category ID in the `category_id` variable.
+Note that setting `resolution_index` to 3 generates the coarse wavelet coefficients, while setting it to 2 generates the detail wavelet coefficients.
+
 
 # Training
 Our training and inference mainly depend on the config file (```config.py``` or ```config_highs.py```).
